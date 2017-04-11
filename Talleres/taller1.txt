@@ -135,6 +135,14 @@ from dbo.publishers p inner join dbo.titles t
 on p.pub_id = t.pub_id and t.type = 'business'
 group by p.pub_name
 
+Ejercicio 14:
+
+select p.pub_name as pubName
+ from dbo.publishers p 
+  inner join dbo.employee e
+  on  e.pub_id = p.pub_id
+ where e.hire_date = (select min(e.hire_date) as hireDate from dbo.employee e
+
 
 
 
