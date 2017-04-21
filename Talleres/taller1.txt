@@ -116,6 +116,12 @@ select sto.stor_name as StoreName, t.cantidad, t.promedio from dbo.stores as sto
 	) t
 on sto.stor_id = t.stor_id
 
+Ejercicio 9:
+select titleCant.cant Ventas, a.au_id Autor, titleCant.cant*t.price*t.royalty/100 TotalAutor, titleCant.cant*t.price*(100-t.royalty)/100 TotalPublisher
+    from  dbo.titles t, dbo.authors a, dbo.titleauthor ta, (select s.title_id tid, sum(s.qty) cant from dbo.sales s group by s.title_id ) titleCant
+        where a.au_id = ta.au_id  and ta.title_id = titleCant.tid and t.title_id = ta.title_id
+            order by Ventas DESC, Autor ASC
+
 Ejercicio 10:
 select max (t.job_lvl) from(
 	select count (e.job_lvl) as job_lvl from dbo.employee e

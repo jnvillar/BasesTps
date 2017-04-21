@@ -1,0 +1,23 @@
+Ejercicio 9:
+
+select titleCant.cant Ventas, a.au_id Autor, titleCant.cant*t.price*t.royalty/100 TotalAutor, titleCant.cant*t.price*(100-t.royalty)/100 TotalPublisher
+    from  dbo.titles t, dbo.authors a, dbo.titleauthor ta, (select s.title_id tid, sum(s.qty) cant from dbo.sales s group by s.title_id ) titleCant
+        where a.au_id = ta.au_id  and ta.title_id = titleCant.tid and t.title_id = ta.title_id
+            order by Ventas DESC, Autor ASC
+
+Ejercicio 12:
+
+select p.pub_name as pub_name, t.pub_id as pubId, t.type as category
+from dbo.titles t 
+inner join dbo.publishers as p
+on p.pub_id = t.pub_id) as t
+where category = 'business'
+group by t.pub_name
+
+Ejericio 21:
+
+select t.job_id as jobID
+from (select e.job_id, e.pub_id from dbo.employee as e 
+group by e.job_id, e.pub_id) t
+group by t.job_id
+having count(1) = (select count(1) from dbo.publishers)
