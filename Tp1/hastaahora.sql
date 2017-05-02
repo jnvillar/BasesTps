@@ -243,10 +243,12 @@ and a.DNI = c.dni
 and  i.IdModalidad = m.IdModalidad
 
 -- Ejercicio 2:
+
+CREATE VIEW MagicView AS
 Select res.pais as Pais, res.medalla as Medalla, sum(res.cantidad) as Cantidad from (
 (Select e.pais as Pais, gi.medalla as Medalla, count(1) as Cantidad
 From Escuela e, Maestro m, Inscripcion i, Competidor c, GanaIndividualmente as gi
-Where  e.NroDePlacaMaestro = m.NroDePlacaMaestro
+Where e.NroDePlacaMaestro = m.NroDePlacaMaestro
 and m.NroDePlacaMaestro = i.NroDePlacaMaestro
 and c.dni = i.dni
 and gi.DNI = c.DNI
@@ -254,7 +256,7 @@ group by e.pais, gi.medalla)
 Union All
 (Select e.pais as Pais, ge.medalla as Medalla, count(1) as Cantidad
 From Escuela e, Maestro m, Inscripcion i, Competidor c, Equipo eq, GanaComoEquipo as ge
-Where  e.NroDePlacaMaestro = m.NroDePlacaMaestro
+Where e.NroDePlacaMaestro = m.NroDePlacaMaestro
 and m.NroDePlacaMaestro = i.NroDePlacaMaestro
 and c.dni = i.dni
 and ge.IdEquipo = eq.IdEquipo
@@ -262,8 +264,26 @@ and eq.idEquipo = c.idEquipo
 group by e.pais, ge.medalla) ) res
 group by res.pais, res.medalla
 
+
+
+select t2.Pais, t2.Medalla, t2.Cantidad
+from 
+(
+(( select t.Pais, t.Medalla, t.Cantidad
+from MagicView t
+where t.Medalla = 'oro' and t.cantidad = (select MAX(m.Cantidad) from MagicView M where m.Medalla = 'oro'))
+union
+(select t.Pais, t.Medalla, t.Cantidad
+from MagicView t
+where t.Medalla = 'plata' and t.cantidad = (select MAX(m.Cantidad) from MagicView M where m.Medalla = 'plata')))
+union
+(select t.Pais, t.Medalla, t.Cantidad
+from MagicView t
+where t.Medalla = 'bronce' and t.cantidad = (select MAX(m.Cantidad) from MagicView M where m.Medalla = 'bronce'))
+) t2
+
 -- Ejercicio 3 Por Pais:
-Select medallero.Pais, sum(medallero.Puntaje) from(
+Select medallero.Pais, sum(medallero.Puntaje) as Puntaje from(
     Select res.pais as Pais, (Case res.medalla when 'Oro' then 3 when 'Plata' then 2 else 1 end) * sum(res.cantidad) as Puntaje from (
         (Select e.pais as Pais, gi.medalla as Medalla, count(1) as Cantidad
         From Escuela e, Maestro m, Inscripcion i, Competidor c, GanaIndividualmente as gi
@@ -287,7 +307,7 @@ Select medallero.Pais, sum(medallero.Puntaje) from(
 group by medallero.Pais
 
 -- Ejercicio 3 por escuela
-Select medallero.Escuela, sum(medallero.Puntaje) from(
+Select medallero.Escuela, sum(medallero.Puntaje) as Puntaje from(
     select t.nombre as Escuela, (Case t.medalla when 'Oro' then 3 when 'Plata' then 2 else 1 end)*sum(t.cantidad) as Puntaje
     from
     ((select es.nombre, gi.medalla, count(1) as Cantidad
@@ -304,6 +324,21 @@ Select medallero.Escuela, sum(medallero.Puntaje) from(
     group by t.nombre, t.medalla
 )medallero
 group by medallero.escuela
+
+-- Ejecicio 4 
+
+--<IdCompetidor>
+select t.id, if gi.medalla is not null then gi.medalla else if ge.medalla is not null ge.medalla else 'No gano medalla'
+from
+(select c.DNI, e.idEquipo, m.Tipo, m.IdModalidad, compet.IdCompetencia
+from Competidor c, Equipo e, Inscripcion i , Modalidad m , Competencia compet
+where <IdCompetidor> = c.DNI and c.DNI = i.DNI and i.IdModalidad = m.IdModalidad and compet.IdModalidad = i.IdModalidad and c.IdEquipo = e.IdEquipo) t
+left outer join
+GanaIndividualmente gi
+on gi.IdCompetencia = t.IdCompetencia and t.DNI = gi.DNI
+left outer join
+GanaComoEquipo ge
+on ge.IdCompetencia = t.IdCompetencia and t.idEquipo = ge.idEquipo
 
 -- Ejercicio 5
 select t.nombre,
