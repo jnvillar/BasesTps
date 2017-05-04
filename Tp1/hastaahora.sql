@@ -54,12 +54,17 @@ CREATE TABLE Competidor (
 
 CREATE TABLE Modalidad (
     IdModalidad integer NOT NULL,
-    Tipo varchar(255),
+    Tipo varchar(255) NOT NULL,
     Sexo char(1) NOT NULL,
+    Peso varchar(255),
+    Edad varchar(255),
     PRIMARY KEY (IdModalidad),
     CHECK (Tipo IN ("Combate", "Forma", "Salto", "Rotura Potencia", "Combate Equipos")),
-    CHECK (Sexo IN ('F', 'M')) 
+    CHECK (Sexo IN ('F', 'M')),
+    CHECK (Peso IN ("Liviano", "Medio", "Pesado", NULL) ),
+    CHECK (Edad IN ("Juveniles", "Adultos", NULL) )
 );
+
 
 CREATE TABLE Inscripcion (
     IdModalidad integer NOT NULL,
@@ -69,44 +74,6 @@ CREATE TABLE Inscripcion (
     FOREIGN KEY (IdModalidad) REFERENCES Modalidad(IdModalidad),
     FOREIGN KEY (DNI) REFERENCES Competidor(DNI),
       FOREIGN KEY (NroDePlacaMaestro) REFERENCES Maestro(NroDePlacaMaestro)
-);
-
-CREATE TABLE Combate (
-    IdModalidad integer NOT NULL,
-    Peso varchar(255) NOT NULL,
-    Edad varchar(255) NOT NULL,
-    PRIMARY KEY (IdModalidad),
-    FOREIGN KEY (IdModalidad) REFERENCES Modalidad(IdModalidad),
-    CHECK (Peso IN ("Liviano", "Medio", "Pesado") ),
-    CHECK (Edad IN ("Juveniles", "Adultos") )
-);
-
-CREATE TABLE Forma (
-    IdModalidad integer NOT NULL,
-    Edad varchar(255) NOT NULL,
-    PRIMARY KEY (IdModalidad),
-    FOREIGN KEY (IdModalidad) REFERENCES Modalidad(IdModalidad),
-    CHECK (Edad IN ("Juveniles", "Adultos") )
-);
-
-CREATE TABLE Salto (
-    IdModalidad integer NOT NULL,
-    Edad varchar(255) NOT NULL,
-    PRIMARY KEY (IdModalidad),
-    FOREIGN KEY (IdModalidad) REFERENCES Modalidad(IdModalidad),
-    CHECK (Edad IN ("Juveniles", "Adultos") )
-);
-
-CREATE TABLE RoturaPotencia (
-    IdModalidad integer NOT NULL,
-    PRIMARY KEY (IdModalidad),
-    FOREIGN KEY (IdModalidad) REFERENCES Modalidad(IdModalidad)
-);
-
-CREATE TABLE CombateEquipos (
-    IdModalidad integer NOT NULL,
-    PRIMARY KEY (IdModalidad),
-    FOREIGN KEY (IdModalidad) REFERENCES Modalidad(IdModalidad)
 );
 
 CREATE TABLE Competencia (
@@ -188,24 +155,17 @@ INSERT INTO Competidor VALUES(100005, 120, 'M', CURDATE(), NULL, 100001);
 INSERT INTO Competidor VALUES(100006, 120, 'M', CURDATE(), 1, 100002);
 INSERT INTO Competidor VALUES(100007, 120, 'M', CURDATE(), NULL, 100002);
 
-INSERT INTO Modalidad VALUES(1, 'Formas', 'M');
-INSERT INTO Modalidad VALUES(2, 'Combate', 'F');
-INSERT INTO Modalidad VALUES(3, 'Combate', 'M');
-INSERT INTO Modalidad VALUES(4, 'Combate Equipos', 'M');
-INSERT INTO Modalidad VALUES(5, 'Combate', 'M');
+INSERT INTO Modalidad VALUES(1, 'Formas', 'M', NULL, 'Juveniles');
+INSERT INTO Modalidad VALUES(2, 'Combate', 'F', 'Liviano', 'Juveniles');
+INSERT INTO Modalidad VALUES(3, 'Combate', 'M', 'Medio', 'Juveniles');
+INSERT INTO Modalidad VALUES(4, 'Combate Equipos', 'M', NULL, NULL);
+INSERT INTO Modalidad VALUES(5, 'Combate', 'M', 'Medio', 'Juveniles');
 
 INSERT INTO Inscripcion values(1, 100003, 1);
 INSERT INTO Inscripcion values(2, 100004, 1);
 INSERT INTO Inscripcion values(3, 100005, 2);
 INSERT INTO Inscripcion values(4, 100006, 3);
 INSERT INTO Inscripcion values(1, 100007, 3);
-
-INSERT INTO Combate VALUES(2, 'Liviano', 'Juveniles');
-INSERT INTO Combate VALUES(3, 'Medio', 'Juveniles');
-
-INSERT INTO Forma VALUES(1, 'Juveniles');
-
-INSERT INTO CombateEquipos VALUES(4);
 
 INSERT INTO Competencia VALUES(1, 1);
 INSERT INTO Competencia VALUES(2, 2);
@@ -232,7 +192,7 @@ INSERT INTO GanaIndividualmente VALUES(2, 100007, 'Bronce');
 INSERT INTO GanaIndividualmente VALUES(3, 100007, 'Plata');
 
 INSERT INTO GanaComoEquipo VALUES(4, 1, 'Oro');
-INSERT INTO GanaComoEquipo VALUES(4, 1, 'Bronce');
+INSERT INTO GanaComoEquipo VALUES(3, 1, 'Bronce');
 INSERT INTO GanaComoEquipo VALUES(2, 1, 'Plata');
 
 -- Ejercicio 1:
