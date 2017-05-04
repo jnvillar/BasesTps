@@ -287,18 +287,22 @@ group by medallero.escuela
 
 -- Ejecicio 4 
 
---<IdCompetidor>
-select t.id, if gi.medalla is not null then gi.medalla else if ge.medalla is not null ge.medalla else 'No gano medalla'
+CREATE VIEW TournamentsByStudent AS
+select t.DNI, t.Nombre, t.Apellido, t.Tipo, t.Sexo, t.Peso, t.Edad, if (gi.medalla is not null,gi.medalla,if(ge.medalla is not null,ge.medalla,'No ganó medalla')) as Medalla
 from
-(select c.DNI, e.idEquipo, m.Tipo, m.IdModalidad, compet.IdCompetencia
-from Competidor c, Equipo e, Inscripcion i , Modalidad m , Competencia compet
-where <IdCompetidor> = c.DNI and c.DNI = i.DNI and i.IdModalidad = m.IdModalidad and compet.IdModalidad = i.IdModalidad and c.IdEquipo = e.IdEquipo) t
+(select c.DNI, al.Nombre, al.Apellido, m.Tipo, m.Sexo, m.Peso, m.Edad, compet.IdCompetencia, c.idEquipo
+from Alumno al, Competidor c, Inscripcion i , Modalidad m , Competencia compet
+where al.DNI = c.DNI and c.DNI = i.DNI and i.IdModalidad = m.IdModalidad and compet.IdModalidad = i.IdModalidad) t
 left outer join
 GanaIndividualmente gi
 on gi.IdCompetencia = t.IdCompetencia and t.DNI = gi.DNI
 left outer join
 GanaComoEquipo ge
 on ge.IdCompetencia = t.IdCompetencia and t.idEquipo = ge.idEquipo
+
+select *
+from TournamentsByStudent t
+where t.DNI = '100003'
 
 -- Ejercicio 5
 select t.nombre,
