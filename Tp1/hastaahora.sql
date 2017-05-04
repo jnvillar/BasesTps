@@ -196,7 +196,7 @@ INSERT INTO GanaComoEquipo VALUES(3, 1, 'Bronce');
 INSERT INTO GanaComoEquipo VALUES(2, 1, 'Plata');
 
 -- Ejercicio 1:
-Select  a.Nombre as Nombre, m.IdModalidad as Categoria
+Select  a.Nombre as Nombre, m.*
 From Competidor as c, Inscripcion as i, Modalidad as m, Alumno as a
 Where c.DNI = i.DNI
 and a.DNI = c.dni
