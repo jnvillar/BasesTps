@@ -124,6 +124,24 @@ CREATE TABLE GanaComoEquipo (
     CHECK (Medalla IN ("Oro", "Bronce", "Plata"))
 );
 
+delimiter $$
+CREATE FUNCTION FiveInTeam()
+RETURNS int
+deterministic
+BEGIN
+ DECLARE TeamsNoFiveMembers INT;
+    SET TeamsNoFiveMembers = 0;
+ select count(1) INTO TeamsNoFiveMembers
+    from
+  (select count(*) as Cant
+  from Competidor
+  group by IdEquipo) t
+ where t.Cant <> 8;
+    return TeamsNoFiveMembers;
+END$$
+
+
+ALTER TABLE Competidor ADD CONSTRAINT FiveForTeam CHECK (FiveInTeam() = 0)
 
 INSERT INTO Maestro VALUES (1, 'Pepe', 'Argento', 'Primer Dan');
 INSERT INTO Maestro VALUES (2, 'Armando', 'Barreda', 'Segundo Dan');
