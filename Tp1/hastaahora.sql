@@ -58,11 +58,13 @@ CREATE TABLE Modalidad (
     Sexo char(1) NOT NULL,
     Peso varchar(255),
     Edad varchar(255),
+    Graduacion varchar(255),
     PRIMARY KEY (IdModalidad),
     CHECK (Tipo IN ("Combate", "Forma", "Salto", "Rotura Potencia", "Combate Equipos")),
     CHECK (Sexo IN ('F', 'M')),
     CHECK (Peso IN ("Liviano", "Medio", "Pesado", NULL) ),
     CHECK (Edad IN ("Juveniles", "Adultos", NULL) )
+    CHECK (Graduacion IN ("Primer Dan", "Segundo Dan", "Tercer Dan", "Cuarto Dan", "Quinto Dan", "Sexto Dan"))
 );
 
 
@@ -155,11 +157,11 @@ INSERT INTO Competidor VALUES(100005, 120, 'M', CURDATE(), NULL, 100001);
 INSERT INTO Competidor VALUES(100006, 120, 'M', CURDATE(), 1, 100002);
 INSERT INTO Competidor VALUES(100007, 120, 'M', CURDATE(), NULL, 100002);
 
-INSERT INTO Modalidad VALUES(1, 'Formas', 'M', NULL, 'Juveniles');
-INSERT INTO Modalidad VALUES(2, 'Combate', 'F', 'Liviano', 'Juveniles');
-INSERT INTO Modalidad VALUES(3, 'Combate', 'M', 'Medio', 'Juveniles');
-INSERT INTO Modalidad VALUES(4, 'Combate Equipos', 'M', NULL, NULL);
-INSERT INTO Modalidad VALUES(5, 'Combate', 'M', 'Medio', 'Juveniles');
+INSERT INTO Modalidad VALUES(1, 'Formas', 'M', NULL, 'Juveniles','Primer Dan');
+INSERT INTO Modalidad VALUES(2, 'Combate', 'F', 'Liviano', 'Juveniles','Segundo Dan');
+INSERT INTO Modalidad VALUES(3, 'Combate', 'M', 'Medio', 'Juveniles','Primer Dan');
+INSERT INTO Modalidad VALUES(4, 'Combate Equipos', 'M', NULL, NULL,'Tercer Dan');
+INSERT INTO Modalidad VALUES(5, 'Combate', 'M', 'Medio', 'Juveniles','Primer Dan');
 
 INSERT INTO Inscripcion values(1, 100003, 1);
 INSERT INTO Inscripcion values(2, 100004, 1);
