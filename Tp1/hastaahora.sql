@@ -62,8 +62,8 @@ CREATE TABLE Modalidad (
     PRIMARY KEY (IdModalidad),
     CHECK (Tipo IN ("Combate", "Forma", "Salto", "Rotura Potencia", "Combate Equipos")),
     CHECK (Sexo IN ('F', 'M')),
-    CHECK (Peso IN ("Liviano", "Medio", "Pesado", NULL) ),
-    CHECK (Edad IN ("Juveniles", "Adultos", NULL) )
+    CHECK (Peso IN ("Liviano", "Medio", "Pesado", NULL)),
+    CHECK (Edad IN ("Juveniles", "Adultos", NULL)),
     CHECK (Graduacion IN ("Primer Dan", "Segundo Dan", "Tercer Dan", "Cuarto Dan", "Quinto Dan", "Sexto Dan"))
 );
 
@@ -206,7 +206,7 @@ and  i.IdModalidad = m.IdModalidad
 
 -- Ejercicio 2:
 
-CREATE VIEW MagicView AS
+CREATE VIEW MedallasPais AS
 Select res.pais as Pais, res.medalla as Medalla, sum(res.cantidad) as Cantidad from (
 (Select e.pais as Pais, gi.medalla as Medalla, count(1) as Cantidad
 From Escuela e, Maestro m, Inscripcion i, Competidor c, GanaIndividualmente as gi
@@ -232,16 +232,16 @@ select t2.Pais, t2.Medalla, t2.Cantidad
 from 
 (
 (( select t.Pais, t.Medalla, t.Cantidad
-from MagicView t
-where t.Medalla = 'oro' and t.cantidad = (select MAX(m.Cantidad) from MagicView M where m.Medalla = 'oro'))
+from MedallasPais t
+where t.Medalla = 'oro' and t.cantidad = (select MAX(m.Cantidad) from MedallasPais M where m.Medalla = 'oro'))
 union
 (select t.Pais, t.Medalla, t.Cantidad
-from MagicView t
-where t.Medalla = 'plata' and t.cantidad = (select MAX(m.Cantidad) from MagicView M where m.Medalla = 'plata')))
+from MedallasPais t
+where t.Medalla = 'plata' and t.cantidad = (select MAX(m.Cantidad) from MedallasPais M where m.Medalla = 'plata')))
 union
 (select t.Pais, t.Medalla, t.Cantidad
-from MagicView t
-where t.Medalla = 'bronce' and t.cantidad = (select MAX(m.Cantidad) from MagicView M where m.Medalla = 'bronce'))
+from MedallasPais t
+where t.Medalla = 'bronce' and t.cantidad = (select MAX(m.Cantidad) from MedallasPais M where m.Medalla = 'bronce'))
 ) t2
 
 -- Ejercicio 3 Por Pais:
