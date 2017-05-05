@@ -146,52 +146,162 @@ ALTER TABLE Competidor ADD CONSTRAINT FiveForTeam CHECK (FiveInTeam() = 0)
 INSERT INTO Maestro VALUES (1, 'Pepe', 'Argento', 'Primer Dan');
 INSERT INTO Maestro VALUES (2, 'Armando', 'Barreda', 'Segundo Dan');
 INSERT INTO Maestro VALUES (3, 'Jose', 'Martinez', 'Tercer Dan');
+INSERT INTO Maestro VALUES (4, 'Facundo', 'Gonzalez', 'Tercer Dan');
+INSERT INTO Maestro VALUES (5, 'Benito', 'Fernandez', 'Segundo Dan');
+INSERT INTO Maestro VALUES (6, 'Carlos', 'Segundo', 'Cuarto Dan');
+INSERT INTO Maestro VALUES (7, 'Marcos', 'Galperin', 'Sexto Dan');
 
 INSERT INTO Escuela VALUES(1,'Escuela 1', 'Argentina', 1);
 INSERT INTO Escuela VALUES(2,'Escuela 2', 'Bolivia', 2);
 INSERT INTO Escuela VALUES(3,'Escuela 3', 'Paraguay', 3);
+INSERT INTO Escuela VALUES(4,'Escuela 3', 'Chile', 4);
+INSERT INTO Escuela VALUES(5,'Escuela 3', 'Chile', 5);
+INSERT INTO Escuela VALUES(6,'Escuela 3', 'Chile', 6);
+INSERT INTO Escuela VALUES(7,'Escuela 3', 'Argentina', 7);
 
 INSERT INTO Alumno VALUES(100000, 'Marcos', 'Perez', 1, 'Primer Dan', 'link a foto de Marcos');
 INSERT INTO Alumno VALUES(100001, 'Laura', 'Gonzalez', 2, 'Segundo Dan', 'link a foto de Laura');
-INSERT INTO Alumno VALUES(100002, 'Romina', 'Martinez', 2, 'Tercer Dan', 'link a foto de Romina');
-INSERT INTO Alumno VALUES(100003, 'Raul', 'Gaitan', 1, 'Primer Dan', 'link a foto de Raul');
-INSERT INTO Alumno VALUES(100004, 'Gonzalo', 'Herrera', 2, 'Segundo Dan', 'link a foto de Gonzalo');
-INSERT INTO Alumno VALUES(100005, 'Alexis', 'Herrero', 2, 'Tercer Dan', 'link a foto de Alexis');
-INSERT INTO Alumno VALUES(100006, 'Sebastian', 'Perez', 2, 'Cuarto Dan', 'link a foto de Sebastian');
-INSERT INTO Alumno VALUES(100007, 'Sebastian', 'Perez', 2, 'Cuarto Dan', 'link a foto de Sebastian');
+INSERT INTO Alumno VALUES(100002, 'Romina', 'Martinez', 3, 'Tercer Dan', 'link a foto de Romina');
+INSERT INTO Alumno VALUES(100003, 'Raul', 'Gaitan', 4, 'Primer Dan', 'link a foto de Raul');
+INSERT INTO Alumno VALUES(100004, 'Gonzalo', 'Herrera', 5, 'Quinto Dan', 'link a foto de Gonzalo');
+INSERT INTO Alumno VALUES(100005, 'Alexis', 'Herrero', 6, 'Tercer Dan', 'link a foto de Alexis');
+INSERT INTO Alumno VALUES(100006, 'Sebastian', 'Perez', 7, 'Cuarto Dan', 'link a foto de Sebastian');
+INSERT INTO Alumno VALUES(100007, 'Sebastian', 'Perez', 8, 'Cuarto Dan', 'link a foto de Sebastian');
+INSERT INTO Alumno VALUES(100008, 'Florencia', 'Gonzalez', 9, 'Primer Dan', 'link a foto de Florencia');
+INSERT INTO Alumno VALUES(100009, 'Maria', 'Emilia', 10, 'Segundo Dan', 'link a foto de Maria');
+INSERT INTO Alumno VALUES(100010, 'Lucia', 'Diano', 11, 'Tercer Dan', 'link a foto de Lucia');
+INSERT INTO Alumno VALUES(100011, 'Candela', 'Bustos', 12, 'Primer Dan', 'link a foto de Candela');
+INSERT INTO Alumno VALUES(100012, 'Sofia', 'Iguerabide', 13, 'Segundo Dan', 'link a foto de Sofia');
+INSERT INTO Alumno VALUES(100013, 'Brian', 'Bohe', 14, 'Quinto Dan', 'link a foto de Brian');
+INSERT INTO Alumno VALUES(100014, 'Jessica', 'Aguirre', 15, 'Cuarto Dan', 'link a foto de Jessica');
+INSERT INTO Alumno VALUES(100015, 'Joaquin', 'Diaz', 16, 'Sexto Dan', 'link a foto de Joaquin');
+INSERT INTO Alumno VALUES(100016, 'Lucas', 'Perez', 17, 'Primer Dan', 'link a foto de Lucas');
+INSERT INTO Alumno VALUES(100017, 'Walter', 'Nicolas', 18, 'Segundo Dan', 'link a foto de Walter');
+INSERT INTO Alumno VALUES(100018, 'Juan', 'Noli', 19, 'Tercer Dan', 'link a foto de Juan');
+INSERT INTO Alumno VALUES(100019, 'Axel', 'Lew', 20, 'Primer Dan', 'link a foto de Axel');
+INSERT INTO Alumno VALUES(100020, 'German', 'Pinzon', 21, 'Quinto Dan', 'link a foto de German');
+INSERT INTO Alumno VALUES(100021, 'Ezequiel', 'Ferrin', 22, 'Tercer Dan', 'link a foto de Ezequiel');
+INSERT INTO Alumno VALUES(100022, 'Agustin', 'Waigand', 23, 'Cuarto Dan', 'link a foto de Agustin');
+INSERT INTO Alumno VALUES(100023, 'Leandro', 'De Pietro', 24, 'Cuarto Dan', 'link a foto de Leandro');
+INSERT INTO Alumno VALUES(100024, 'Oscar', 'Ortiz', 25, 'Primer Dan', 'link a foto de Oscar');
+INSERT INTO Alumno VALUES(100025, 'Augusto', 'Consolani', 26, 'Segundo Dan', 'link a foto de Augusto');
+INSERT INTO Alumno VALUES(100026, 'Erick', 'Chamo', 27, 'Tercer Dan', 'link a foto de Erick');
+INSERT INTO Alumno VALUES(100027, 'Hernan', 'Wilkinson', 28, 'Primer Dan', 'link a foto de Hernan');
+INSERT INTO Alumno VALUES(100028, 'Esteban', 'Wilkinson', 28, 'Primer Dan', 'link a foto de Esteban');
 
 INSERT INTO Equipo VALUES(1, 'Equipo ROJO');
 INSERT INTO Equipo VALUES(2, 'Coon y Amigos');
 INSERT INTO Equipo VALUES(3, 'Los Taekwondistas indestructibles');
+INSERT INTO Equipo VALUES(4, 'El robo del siglo');
 
 INSERT INTO Coach VALUES(100000);
 INSERT INTO Coach VALUES(100001);
 INSERT INTO Coach VALUES(100002);
 INSERT INTO Coach VALUES(100003);
+INSERT INTO Coach VALUES(100014);
+INSERT INTO Coach VALUES(100019);
+INSERT INTO Coach VALUES(100025);
+INSERT INTO Coach VALUES(100028);
 
-INSERT INTO Competidor VALUES(100003, 120, 'M', CURDATE(), NULL, 100002);
-INSERT INTO Competidor VALUES(100004, 120, 'M', CURDATE(), NULL, 100000);
-INSERT INTO Competidor VALUES(100005, 120, 'M', CURDATE(), NULL, 100001);
-INSERT INTO Competidor VALUES(100006, 120, 'M', CURDATE(), 1, 100002);
-INSERT INTO Competidor VALUES(100007, 120, 'M', CURDATE(), NULL, 100002);
+INSERT INTO Competidor VALUES(100003, 120, 'M', CURDATE(), 1, 100000);
+INSERT INTO Competidor VALUES(100004, 120, 'F', CURDATE(), 1, 100000);
+INSERT INTO Competidor VALUES(100005, 120, 'F', CURDATE(), 1, 100000);
+INSERT INTO Competidor VALUES(100006, 120, 'M', CURDATE(), 1, 100000);
+INSERT INTO Competidor VALUES(100007, 120, 'M', CURDATE(), 1, 100000);
+
+INSERT INTO Competidor VALUES(100008, 120, 'M', CURDATE(), NULL, 100000);
+INSERT INTO Competidor VALUES(100009, 120, 'M', CURDATE(), 2, 100001);
+INSERT INTO Competidor VALUES(100010, 120, 'M', CURDATE(), 2, 100001);
+INSERT INTO Competidor VALUES(100011, 120, 'M', CURDATE(), 2, 100001);
+INSERT INTO Competidor VALUES(100012, 120, 'M', CURDATE(), 2, 100002);
+INSERT INTO Competidor VALUES(100013, 120, 'M', CURDATE(), 2, 100002);
+
+INSERT INTO Competidor VALUES(100014, 120, 'M', CURDATE(), 3, 100014);
+INSERT INTO Competidor VALUES(100015, 120, 'M', CURDATE(), 3, 100014);
+INSERT INTO Competidor VALUES(100016, 120, 'M', CURDATE(), 3, 100014);
+INSERT INTO Competidor VALUES(100017, 120, 'M', CURDATE(), 3, 100014);
+INSERT INTO Competidor VALUES(100018, 120, 'M', CURDATE(), 3, 100014);
+
+INSERT INTO Competidor VALUES(100019, 120, 'M', CURDATE(), 4, 100019);
+INSERT INTO Competidor VALUES(100020, 120, 'M', CURDATE(), 4, 100019);
+INSERT INTO Competidor VALUES(100021, 120, 'M', CURDATE(), 4, 100019);
+INSERT INTO Competidor VALUES(100022, 120, 'M', CURDATE(), 4, 100019);
+INSERT INTO Competidor VALUES(100023, 120, 'M', CURDATE(), 4, 100019);
+
+INSERT INTO Competidor VALUES(100024, 120, 'M', CURDATE(), NULL, 100019);
+INSERT INTO Competidor VALUES(100025, 120, 'M', CURDATE(), NULL, 100025);
+INSERT INTO Competidor VALUES(100026, 120, 'M', CURDATE(), NULL, 100025);
+INSERT INTO Competidor VALUES(100027, 120, 'M', CURDATE(), NULL, 100025);
+INSERT INTO Competidor VALUES(100028, 120, 'M', CURDATE(), NULL, 100028);
+
 
 INSERT INTO Modalidad VALUES(1, 'Formas', 'M', NULL, 'Juveniles','Primer Dan');
 INSERT INTO Modalidad VALUES(2, 'Combate', 'F', 'Liviano', 'Juveniles','Segundo Dan');
 INSERT INTO Modalidad VALUES(3, 'Combate', 'M', 'Medio', 'Juveniles','Primer Dan');
+INSERT INTO Modalidad VALUES(5, 'Combate', 'M', 'Medio', 'Juveniles','Tercer Dan');
+INSERT INTO Modalidad VALUES(7, 'Forma', 'M', NULL, 'Juveniles','Tercer Dan');
+INSERT INTO Modalidad VALUES(8, 'Rotura de Potencia', 'M', NULL, NULL,'Tercer Dan');
+
 INSERT INTO Modalidad VALUES(4, 'Combate Equipos', 'M', NULL, NULL,'Tercer Dan');
-INSERT INTO Modalidad VALUES(5, 'Combate', 'M', 'Medio', 'Juveniles','Primer Dan');
+INSERT INTO Modalidad VALUES(6, 'Combate Equipos', 'F', NULL, NULL,'Primer Dan');
 
-INSERT INTO Inscripcion values(1, 100003, 1);
-INSERT INTO Inscripcion values(2, 100004, 1);
-INSERT INTO Inscripcion values(3, 100005, 2);
-INSERT INTO Inscripcion values(4, 100006, 3);
-INSERT INTO Inscripcion values(1, 100007, 3);
+INSERT INTO Inscripcion values(4, 100004, 1); 
+INSERT INTO Inscripcion values(4, 100005, 1);
+INSERT INTO Inscripcion values(4, 100006, 1);
+INSERT INTO Inscripcion values(4, 100007, 1);
+INSERT INTO Inscripcion values(4, 100003, 1);
 
-INSERT INTO Competencia VALUES(1, 1);
-INSERT INTO Competencia VALUES(2, 2);
-INSERT INTO Competencia VALUES(3, 3);
-INSERT INTO Competencia VALUES(4, 4);
-INSERT INTO Competencia VALUES(5, 5);
+INSERT INTO Inscripcion values(4, 100009, 2);
+INSERT INTO Inscripcion values(4, 100010, 2);
+INSERT INTO Inscripcion values(4, 100011, 2);
+INSERT INTO Inscripcion values(4, 100012, 2);
+INSERT INTO Inscripcion values(4, 100013, 2);
+
+INSERT INTO Inscripcion values(6, 100014, 3);
+INSERT INTO Inscripcion values(6, 100015, 3);
+INSERT INTO Inscripcion values(6, 100016, 3);
+INSERT INTO Inscripcion values(6, 100017, 3);
+INSERT INTO Inscripcion values(6, 100018, 3);
+
+INSERT INTO Inscripcion values(6, 100019, 4);
+INSERT INTO Inscripcion values(6, 100020, 4);
+INSERT INTO Inscripcion values(6, 100021, 4);
+INSERT INTO Inscripcion values(6, 100022, 4);
+INSERT INTO Inscripcion values(6, 100023, 4);
+
+INSERT INTO Inscripcion values(1, 100010, 2);
+INSERT INTO Inscripcion values(1, 100027, 6);
+INSERT INTO Inscripcion values(1, 100028, 7);
+
+INSERT INTO Inscripcion values(2, 100003, 1);
+INSERT INTO Inscripcion values(2, 100016, 3);
+INSERT INTO Inscripcion values(2, 100008, 1);
+
+INSERT INTO Inscripcion values(3, 100018, 3);
+INSERT INTO Inscripcion values(3, 100012, 2);
+INSERT INTO Inscripcion values(3, 100007, 1);
+
+INSERT INTO Inscripcion values(5, 100025, 6);
+INSERT INTO Inscripcion values(5, 100027, 6);
+INSERT INTO Inscripcion values(5, 100024, 5);
+
+INSERT INTO Inscripcion values(7, 100016, 3);
+INSERT INTO Inscripcion values(7, 100010, 2);
+INSERT INTO Inscripcion values(7, 100020, 4);
+
+INSERT INTO Inscripcion values(8, 100026, 6);
+INSERT INTO Inscripcion values(8, 100024, 5);
+INSERT INTO Inscripcion values(8, 100015, 3);
+
+INSERT INTO Competencia VALUES(1, 4);
+INSERT INTO Competencia VALUES(2, 6);
+
+INSERT INTO Competencia VALUES(3, 8);
+INSERT INTO Competencia VALUES(4, 5);
+INSERT INTO Competencia VALUES(5, 1);
+INSERT INTO Competencia VALUES(6, 3);
+INSERT INTO Competencia VALUES(7, 2);
+INSERT INTO Competencia VALUES(8, 7);
 
 INSERT INTO Arbitro VALUES(1, 'Gonzalo', 'Perez', 'Argentina', 'Primer Dan');
 INSERT INTO Arbitro VALUES(2, 'Pepito', 'Gonzalez', 'Paraguay', 'Segundo Dan');
@@ -204,16 +314,37 @@ INSERT INTO Arbitrada VALUES(3, 3, 'Suplente');
 INSERT INTO Arbitrada VALUES(4, 4, 'Arbitro Central');
 INSERT INTO Arbitrada VALUES(4, 5, 'Arbitro Central');
 
-INSERT INTO GanaIndividualmente VALUES(1, 100003, 'Oro');
-INSERT INTO GanaIndividualmente VALUES(2, 100004, 'Oro');
-INSERT INTO GanaIndividualmente VALUES(3, 100005, 'Plata');
-INSERT INTO GanaIndividualmente VALUES(1, 100007, 'Oro');
-INSERT INTO GanaIndividualmente VALUES(2, 100007, 'Bronce');
+INSERT INTO GanaIndividualmente VALUES(1, 100010, 'Oro');
+INSERT INTO GanaIndividualmente VALUES(1, 100027, 'Bronce');
+INSERT INTO GanaIndividualmente VALUES(1, 100028, 'Plata');
+
+INSERT INTO GanaIndividualmente VALUES(2, 100003, 'Oro');
+INSERT INTO GanaIndividualmente VALUES(2, 100016, 'Bronce');
+INSERT INTO GanaIndividualmente VALUES(2, 100008, 'Plata');
+
+INSERT INTO GanaIndividualmente VALUES(3, 100018, 'Oro');
+INSERT INTO GanaIndividualmente VALUES(3, 100012, 'Bronce');
 INSERT INTO GanaIndividualmente VALUES(3, 100007, 'Plata');
 
-INSERT INTO GanaComoEquipo VALUES(4, 1, 'Oro');
-INSERT INTO GanaComoEquipo VALUES(3, 1, 'Bronce');
-INSERT INTO GanaComoEquipo VALUES(2, 1, 'Plata');
+INSERT INTO GanaIndividualmente VALUES(5, 100025, 'Oro');
+INSERT INTO GanaIndividualmente VALUES(5, 100024, 'Bronce');
+INSERT INTO GanaIndividualmente VALUES(5, 100017, 'Plata');
+
+INSERT INTO GanaIndividualmente VALUES(7, 100016, 'Oro');
+INSERT INTO GanaIndividualmente VALUES(7, 100010, 'Bronce');
+INSERT INTO GanaIndividualmente VALUES(7, 100020, 'Plata');
+
+INSERT INTO GanaIndividualmente VALUES(8, 100026, 'Oro');
+INSERT INTO GanaIndividualmente VALUES(8, 100024, 'Bronce');
+INSERT INTO GanaIndividualmente VALUES(8, 100015, 'Plata');
+
+INSERT INTO GanaComoEquipo VALUES(1, 1, 'Oro');
+INSERT INTO GanaComoEquipo VALUES(3, 1, 'Plata');
+INSERT INTO GanaComoEquipo VALUES(2, 1, 'Bronce');
+
+INSERT INTO GanaComoEquipo VALUES(2, 2, 'Oro');
+INSERT INTO GanaComoEquipo VALUES(4, 2, 'Bronce');
+INSERT INTO GanaComoEquipo VALUES(1, 2, 'Plata');
 
 -- Ejercicio 1:
 Select  a.Nombre as Nombre, m.*
