@@ -1,0 +1,54 @@
+Ejercicio 1:
+
+r.table('persona')
+
+Ejericicio 2:
+
+r.table('persona').filter({gender:"Male"})
+
+Ejericicio 3: 
+
+r.table('persona').group('gender').count()
+r.table('persona').count()
+
+Ejercicio 4:
+
+r.table('persona').filter(r.row('first_name').match("^M")).filter({gender:"Male"})
+
+Ejercicio 5:
+
+r.table('persona')
+.filter(r.row('city').match("Buenos Aires"))
+.filter({gender:"Male"})
+.filter(r.row('age').gt(49))
+
+Ejercicio 6:
+
+r.table('persona').group('gender').avg('salary')
+
+Ejercicio 7:
+
+r.table('persona').filter({gender:"Male"}).pluck('email')
+
+r.table('persona')
+.filter(r.row('age').gt(19))
+.filter({gender:"Male"})
+.update({telephone:{cellphone:'15-8888-55555'}})
+ 
+
+Ejercicio 8
+r.table('persona').filter({gender:"Male"}).pluck({'telephone':'cellphone'})
+
+Ejercicio 9:
+r.table('persona').pluck('first_name','last_name',{'telephone':'cellphone'})
+
+Ejercicio 10:
+
+r.table('persona').filter({gender:"Female"}).update({telephone:{satellite:'6969'}})
+
+  
+
+
+
+
+
