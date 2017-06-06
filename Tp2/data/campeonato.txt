@@ -1,0 +1,26 @@
+"Campeonato" : {
+    "type" : "object",
+    "properties" : {
+        "idCampeonato" : {"type" : "Integer"},
+        "Modalidad" : {
+            "type": "object",
+            "properties": {
+                "nombre": {"type": "string" "enum": ["Combate", "Combate por equipos", 
+                "Formas", "Salto"]},
+                "edad": {"type": "string" "enum": ["juveniles", "adultos", null]},
+                "peso": {"type": "string" "enum": ["liviano", "pesado", null]},
+                "sexo": {"type": "string" "enum": ["masculino", "femenino", null]}
+            }
+        }
+        "partidos" : {
+            "type" : "array",
+            "Enfrentamiento" : {
+                "type": "object",
+                "properties": {
+                    "idGanador": {"type": "Integer"},
+                    "idPerdedor": {"type": "Integer"},
+              }
+            }
+        }
+    }
+}
