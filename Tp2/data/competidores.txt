@@ -1,5 +1,4 @@
-competidores:
-    [
+[
 	{
 		"id": 1,
 		"dni": 232323,

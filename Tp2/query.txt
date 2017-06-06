@@ -1,8 +1,8 @@
-2.4
+2.4:
 
 r.table('arbitro').filter(r.row('dirigio').count().gt(3))
 
-2.? (mal)
+2.6:
 
 r.table("medallas").innerJoin(
     r.table("competidores"),

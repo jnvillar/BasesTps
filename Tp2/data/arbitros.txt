@@ -1,4 +1,4 @@
-arbitros:[
+[
     {
     	"id":1,
     	"dirigio":[1,2,3]},

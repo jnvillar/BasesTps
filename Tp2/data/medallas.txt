@@ -1,4 +1,4 @@
-medallas:[
+[
 	{
 		"id": 1,
 		"tipo" : "oro",
