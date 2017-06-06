@@ -1,0 +1,12 @@
+2.4
+
+r.table('arbitro').filter(r.row('dirigio').count().gt(3))
+
+2.? (mal)
+
+r.table("medallas").innerJoin(
+    r.table("competidores"),
+  function(medalla,competidor){
+  	return  competidor["id"] == medalla["idCompetidor"] 
+  }     
+)

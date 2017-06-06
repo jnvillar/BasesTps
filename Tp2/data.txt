@@ -1,0 +1,83 @@
+Data:
+    
+    arbitros:
+    [
+    {"id":1,"dirigio":[1,2,3]},
+    {"id":2,"dirigio":[4,5,6,7]},
+    {"id":3,"dirigio":[1,2,3,8]},
+    {"id":4,"dirigio":[1,2,3]},
+    {"id":5,"dirigió":[1,2,3]},
+    {"id":6,"dirigió":[1,2,3]},
+    {"id":7,"dirigió":[1,2,3]}
+    ]
+
+
+    medallas:[
+	{
+		"id": 1,
+		"tipo" : "oro",
+		"idCompetidor": 1,
+		"idCompetencia": 1
+	},
+	{
+		"id": 2,
+		"tipo" : "oro",
+		"idCompetidor": 2,
+		"idCompetencia": 2
+	},
+	{
+		"id": 3,
+		"tipo" : "oro",
+		"idCompetidor": 3,
+		"idCompetencia": 3
+	}
+]
+
+    competidores:
+    [
+	{
+		"id": 1,
+		"dni": 232323,
+		"nombre": "juan",
+		"apellido": "perez",
+		"edad": 23,
+		"peso": 55,
+		"sexo": "masculino",
+		"escuela": {
+			"id": 1,
+			"nombre": "escuela1"
+		},
+		"medallas": [1
+		]
+	},
+	{
+		"id": 2,
+		"dni": 342221,
+		"nombre": "pepito",
+		"apellido": "hernandez",
+		"edad": 23,
+		"peso": 55,
+		"sexo": "masculino",
+		"escuela": {
+			"id": 1,
+			"nombre": "escuela2"
+		},
+		"medallas": [2
+		]
+	},
+	{
+		"id": 3,
+		"dni": 545342,
+		"nombre": "pepito",
+		"apellido": "hernandez",
+		"edad": 10,
+		"peso": 55,
+		"sexo": "masculino",
+		"escuela": {
+			"id": 2,
+			"nombre": "escuela3"
+		},
+		"medallas": [3
+		]
+	}
+]
