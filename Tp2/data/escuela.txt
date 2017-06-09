@@ -7,8 +7,8 @@
                 {
                    "ResumenCampeonato" : {
                         "Campeonato": "Buenos Aires 2017",
-                        "CantidadDeMedallas": ,
-                        "CantidadDeCompetidores" "1": 
+                        "CantidadDeMedallas": "2",
+                        "CantidadDeCompetidores": "1"
                   }
                 }
             ]
@@ -21,8 +21,8 @@
                 {
                    "ResumenCampeonato" : {
                         "Campeonato": "Buenos Aires 2017",
-                        "CantidadDeMedallas": ,
-                        "CantidadDeCompetidores" "1": 
+                        "CantidadDeMedallas": "1",
+                        "CantidadDeCompetidores": "1"
                   }
                 }
             ]
@@ -35,8 +35,8 @@
                 {
                    "ResumenCampeonato" : {
                         "Campeonato": "Buenos Aires 2017",
-                        "CantidadDeMedallas": ,
-                        "CantidadDeCompetidores" "2": 
+                        "CantidadDeMedallas": "3",
+                        "CantidadDeCompetidores": "2"
                   }
                 }
             ]
@@ -49,8 +49,8 @@
                 {
                    "ResumenCampeonato" : {
                         "Campeonato": "Alemania 2015",
-                        "CantidadDeMedallas": ,
-                        "CantidadDeCompetidores" "1": 
+                        "CantidadDeMedallas": "3",
+                        "CantidadDeCompetidores": "1"
                   }
                 }
             ]
