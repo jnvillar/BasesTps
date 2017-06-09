@@ -1,51 +1,75 @@
 [
 {
-    "idCampeonato" : 1,
-    "modalidad" : {
-        "nombre": "Salto", 
-        "edad": "Juveniles",
-        "peso": "Liviano",
-        "sexo": "Femenino"
+    "nombre":"Buenos Aires 2017",
+    "resumenCompetidores":
+    [
+        {
+            "dni":"232323",
+            "nombre":"juan",
+            "apellido":"perez",
+            "enfrentamientosGanados":"10"
         },
-    "partidos" : 
-        [
-            {
-                "idGanador" : 1,
-                "idPerdedor" : 2,
-            },
-            {
-                "idGanador" : 1,
-                "idPerdedor" : 3,
-            },
-            {
-                "idGanador" : 1,
-                "idPerdedor" : 3,
-            }
-        ]
+        {
+            "dni":"342221",
+            "nombre":"pepito",
+            "apellido":"hernandez",
+            "enfrentamientosGanados":"20"
+        },
+        {
+            "dni":"545342",
+            "nombre":"facundo",
+            "apellido":"villalba",
+            "enfrentamientosGanados":"45"
+        }
+    ]
 },
 {
-    "idCampeonato" : 2,
-    "modalidad" : {
-        "nombre": "Salto", 
-        "edad": "Juveniles",
-        "peso": "Liviano",
-        "sexo": "Femenino"
+    "nombre":"Brasil 2017",
+    "resumenCompetidores":
+    [
+        {
+            "dni":"232323",
+            "nombre":"juan",
+            "apellido":"perez",
+            "enfrentamientosGanados":"0"
         },
-    "partidos" : 
-        [
-            {
-                "idGanador" : 2,
-                "idPerdedor" : 1,
-            },
-            {
-                "idGanador" : 2,
-                "idPerdedor" : 3,
-            },
-            {
-                "idGanador" : 1,
-                "idPerdedor" : 2,
-            }
-        ]
-}
+        {
+            "dni":"342221",
+            "nombre":"pepito",
+            "apellido":"hernandez",
+            "enfrentamientosGanados":"9"
+        },
+        {
+            "dni":"545342",
+            "nombre":"facundo",
+            "apellido":"villalba",
+            "enfrentamientosGanados":"3"
+        }
+    ]
+},
+{
+    "nombre":"Alemañia 2015",
+    "resumenCompetidores":
+    [
+        {
+            "dni":"232323",
+            "nombre":"juan",
+            "apellido":"perez",
+            "enfrentamientosGanados":"90"
+        },
+        {
+            "dni":"342221",
+            "nombre":"pepito",
+            "apellido":"hernandez",
+            "enfrentamientosGanados":"10"
+        },
+        {
+            "dni":"545342",
+            "nombre":"facundo",
+            "apellido":"villalba",
+            "enfrentamientosGanados":"8"
+        }
+    ]
+},
 ]
 
