@@ -11,8 +11,7 @@
 			"id": 1,
 			"nombre": "escuela1"
 		},
-		"medallas": [1
-		]
+		"resumenModalidades": [ {Formas, 1}, {Combate, 3} ]
 	},
 	{
 		"id": 2,
@@ -26,8 +25,7 @@
 			"id": 1,
 			"nombre": "escuela2"
 		},
-		"medallas": [2
-		]
+		"resumenModalidades": [ {Formas, 2}, {Salto, 3} ]
 	},
 	{
 		"id": 3,
@@ -41,7 +39,6 @@
 			"id": 2,
 			"nombre": "escuela3"
 		},
-		"medallas": [3
-		]
+		"resumenModalidades": [ {Fuerza, 1} ]
 	}
 ]
