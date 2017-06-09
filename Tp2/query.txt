@@ -3,7 +3,7 @@ r.table('campeonato').filter({nombre:'Alemañia 2015'}).getField('resumenCompeti
 
 2.2
 
-r.table('escuelas').pluck(['nombre', 'ResumenCampeonatos'])
+r.table('escuelas')
     .map(function(resumen) {
       return {
         nombre: resumen.getField('nombre'),
@@ -12,7 +12,7 @@ r.table('escuelas').pluck(['nombre', 'ResumenCampeonatos'])
         .reduce(function(left, right) {
            return left.add(right);
         })}})
-        
+
 2.4:
 
 r.table('arbitro').filter(r.row('dirigio').count().gt(3))
