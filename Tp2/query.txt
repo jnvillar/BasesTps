@@ -1,3 +1,10 @@
+2.2
+
+r.table("medallas").eqJoin("idCompetidor", r.table("competidores"))
+  .getField("right")
+  .getField("escuela").group("nombre").count()
+
+
 2.4:
 
 r.table('arbitro').filter(r.row('dirigio').count().gt(3))
