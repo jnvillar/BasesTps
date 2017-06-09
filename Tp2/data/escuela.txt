@@ -1,44 +1,36 @@
 [
     {
-        "nombre": "Escuela1",
-        "país": "Pais1",
-        "ResumenCampeonatos" : 
-            [
-                {
-                   "ResumenCampeonato" : {
-                        "Campeonato": "Buenos Aires 2017",
-                        "CantidadDeMedallas": "2",
-                        "CantidadDeCompetidores": "1"
-                  }
-                },
-                {
-                   "ResumenCampeonato" : {
-                        "Campeonato": "Buenos Aires 2017",
-                        "CantidadDeMedallas": "1",
-                        "CantidadDeCompetidores": "1"
-                  }
-                }
-            ]
+    "nombre": "Escuela1",
+    "país": "Pais1",
+    "resumenCampeonatos" : 
+        [
+            {
+                "campeonato": "Buenos Aires 2017",
+                "cantidadDeMedallas": 2,
+                "cantidadDeCompetidores": 1
+            },
+            {
+                "campeonato": "Buenos Aires 2017",
+                "cantidadDeMedallas": 1,
+                "cantidadDeCompetidores": 1
+            }
+        ]
     },   
     {
-        "nombre": "Escuela2",
-        "país": "Pais1",
-        "ResumenCampeonatos" : 
-            [
-                {
-                   "ResumenCampeonato" : {
-                        "Campeonato": "Buenos Aires 2017",
-                        "CantidadDeMedallas": "3",
-                        "CantidadDeCompetidores": "2"
-                  }
-                },
-                 {
-                   "ResumenCampeonato" : {
-                        "Campeonato": "Alemania 2015",
-                        "CantidadDeMedallas": "3",
-                        "CantidadDeCompetidores": "1"
-                  }
-                }
-            ]
+    "nombre": "Escuela2",
+    "pais": "Pais1",
+    "resumenCampeonatos" : 
+        [ 
+           {
+                "campeonato": "Buenos Aires 2017",
+                "cantidadDeMedallas": 3,
+                "cantidadDeCompetidores": 2
+            },
+            {
+                "campeonato": "Alemania 2015",
+                "cantidadDeMedallas": 3,
+                "cantidadDeCompetidores": 1
+            }
+        ]
     }
 ]
