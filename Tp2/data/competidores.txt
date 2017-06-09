@@ -30,8 +30,8 @@
 	{
 		"id": 3,
 		"dni": 545342,
-		"nombre": "pepito",
-		"apellido": "hernandez",
+		"nombre": "facundo",
+		"apellido": "villalba",
 		"edad": 10,
 		"peso": 55,
 		"sexo": "masculino",
