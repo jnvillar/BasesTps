@@ -1,0 +1,58 @@
+[
+    {
+        "nombre": "Escuela1",
+        "país": "Pais1",
+        "ResumenCampeonatos" : 
+            [
+                {
+                   "ResumenCampeonato" : {
+                        "Campeonato": "Buenos Aires 2017",
+                        "CantidadDeMedallas": ,
+                        "CantidadDeCompetidores" "1": 
+                  }
+                }
+            ]
+    },   
+    {       
+        "nombre": "Escuela1",
+        "país": "Pais1",
+        "ResumenCampeonatos" : 
+            [
+                {
+                   "ResumenCampeonato" : {
+                        "Campeonato": "Buenos Aires 2017",
+                        "CantidadDeMedallas": ,
+                        "CantidadDeCompetidores" "1": 
+                  }
+                }
+            ]
+    }, 
+    {
+        "nombre": "Escuela2",
+        "país": "Pais1",
+        "ResumenCampeonatos" : 
+            [
+                {
+                   "ResumenCampeonato" : {
+                        "Campeonato": "Buenos Aires 2017",
+                        "CantidadDeMedallas": ,
+                        "CantidadDeCompetidores" "2": 
+                  }
+                }
+            ]
+    },
+    {
+        "nombre": "Escuela2",
+        "país": "Pais1",
+        "ResumenCampeonatos" : 
+            [
+                {
+                   "ResumenCampeonato" : {
+                        "Campeonato": "Alemania 2015",
+                        "CantidadDeMedallas": ,
+                        "CantidadDeCompetidores" "1": 
+                  }
+                }
+            ]
+    },
+]
