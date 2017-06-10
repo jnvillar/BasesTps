@@ -19,6 +19,19 @@ r.table('arbitro').filter(r.row('dirigio').count().gt(3))
 
 2.5
 
+r.table('escuelas')
+      .map(function(escuela) {
+        return {
+          Resumen: escuela('ResumenCampeonatos').map(function(resumen) {
+            return {
+              NombreEscuela: escuela('nombre'),
+              Campeonato: resumen('Campeonato'),
+              CantidadDeCompetidores: resumen('CantidadDeCompetidores')
+            };
+          })}})('Resumen').reduce(function(left, right) { return left.add(right); })
+      .group('Campeonato').max('CantidadDeCompetidores')
+
+
 2.6:
 
 r.table("medallas").innerJoin(
@@ -27,3 +40,15 @@ r.table("medallas").innerJoin(
   	return  competidor["id"] == medalla["idCompetidor"]
   }
 )
+r.table("competidores").max("MedallasDeFuerza")
+r.table("competidores").max("MedallasDeCombatePorEquipos")
+r.table("competidores").max("MedallasDeCombate")
+r.table("competidores").max("MedallasDeForma")
+r.table("competidores").max("MedallasDeSalto")
+
+
+escuela.getField('ResumenCampeonatos').forEach(function(campeonato) { return result.append({}); })
+
+Campeonato
+
+Campeonato

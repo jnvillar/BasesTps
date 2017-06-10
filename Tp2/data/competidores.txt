@@ -11,17 +11,11 @@
 			"id": 1,
 			"nombre": "escuela1"
 		},
-		"resumenModalidades": 
-		[ 
-			{
-			"modalidad": "Formas",
-			"cantidadMedallas": 1
-			}, 
-			{
-			"modalidad": "Combate", 
-			"cantidadMedallas":3
-			} 
-		]
+		"MedallasDeForma": 1,
+		"MedallasDeCombate":3,
+		"MedallasDeSalto":0,
+		"MedallasDeCombatePorEquipos":0,
+		"MedallasDeFuerza": 0
 	},
 	{
 		"id": 2,
@@ -35,17 +29,11 @@
 			"id": 1,
 			"nombre": "escuela2"
 		},
-		"resumenModalidades": 
-		[ 
-			{
-			"modalidad":"Formas", 
-			"cantidadMedallas":2
-			}, 
-			{
-			"modalidad":"Salto", 
-			"cantidadMedallas":3
-			} 
-		]
+		"MedallasDeForma": 2,
+		"MedallasDeCombate":0,
+		"MedallasDeSalto":3,
+		"MedallasDeCombatePorEquipos":0,
+		"MedallasDeFuerza": 0
 	},
 	{
 		"id": 3,
@@ -59,12 +47,10 @@
 			"id": 2,
 			"nombre": "escuela3"
 		},
-		"resumenModalidades": 
-			[ 
-				{
-				"modalidad":"Fuerza", 
-				"cantidadMedallas":1
-				} 
-			]
+		"MedallasDeForma": 0,
+		"MedallasDeCombate":0,
+		"MedallasDeSalto":0,
+		"MedallasDeCombatePorEquipos":0,
+		"MedallasDeFuerza": 1
 	}
 ]
