@@ -13,6 +13,18 @@ r.table('escuelas')
            return left.add(right);
         })}})
 
+
+2.3:
+
+r.table('escuelas')
+       .map(function(escuela) {
+         return {
+           Escuela : escuela('nombre'),
+           Result: escuela('ResumenCampeonatos').
+           max('CantidadDeMedallas').without('CantidadDeCompetidores')
+           }})
+
+
 2.4:
 
 r.table('arbitro').filter(r.row('dirigio').count().gt(3))
