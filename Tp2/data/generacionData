@@ -1,0 +1,88 @@
+[
+  '{{repeat(5, 7)}}',
+  {
+    
+    dni: '{{integer(20000000, 45000000)}}',
+    name: '{{firstName()}}',
+    apellido: '{{surname()}}',
+    edad: '{{integer(18, 40)}}', 
+    sexo: '{{gender()}}',
+    peso: '{{integer(50, 120)}}',
+    escuela: {
+      nombre: '{{company().toUpperCase()}}'
+    },
+    medallasDeForma: '{{integer(0, 4)}}',
+    medallasDeCombate: '{{integer(0, 2)}}',
+    medallasDeSalto: '{{integer(0, 4)}}',
+    medallasDeCombatePorEquipos: '{{integer(0, 3)}}',
+    medallasDeFuerza: '{{integer(0, 4)}}'
+    
+  }
+]
+
+
+
+
+[
+  '{{repeat(5, 7)}}',
+  {
+    
+    idArbitro: '{{index()}}',
+    dirigio: [
+      '{{repeat(1,5)}}',
+      {
+        campeonato: '{{country()}} {{date(new Date(1970, 0, 1), new Date(), "YYYY")}}' 
+      }
+    ]
+    
+  }
+]
+
+
+[
+  '{{repeat(5, 7)}}',
+  {
+    
+    campeonato: '{{country()}} {{date(new Date(1970, 0, 1), new Date(), "YYYY")}}',
+    resumenCompetidores: [
+      '{{repeat(10,30)}}',
+      {
+        historial: {
+          dni: '{{integer(20000000, 45000000)}}',
+          name: '{{firstName()}}',
+          apellido: '{{surname()}}',
+          enfrentamientosGanados: '{{integer(0, 15)}}'
+        }
+      }
+    ]
+    
+  }
+]
+
+
+
+[
+  '{{repeat(5, 7)}}',
+  {
+    idEscuela: '{{index()}}',
+    nombre: '{{company().toUpperCase()}}',
+    pais: '{{country()}}',
+    resumenCampeonatos: [
+        '{{repeat(1, 7)}}',
+      {
+        campeonato: '{{country()}} {{date(new Date(1970, 0, 1), new Date(), "YYYY")}}',
+        cantidadDeMedallas:  '{{integer(0,12)}}',
+        cantidadDeCompetidores: '{{integer(1, 10)}}'
+      }
+    ]
+    
+  }
+]
+
+
+
+
+
+
+
+
