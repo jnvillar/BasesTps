@@ -46,21 +46,13 @@ r.table('escuelas')
 
 2.6:
 
-r.table("medallas").innerJoin(
-    r.table("competidores"),
-  function(medalla,competidor){
-  	return  competidor["id"] == medalla["idCompetidor"]
-  }
+r.table("competidores").max("MedallasDeFuerza").setUnion(
+  r.table("competidores").max("MedallasDeCombatePorEquipos")
+).setUnion(
+  r.table("competidores").max("MedallasDeCombate")
+).setUnion(
+  r.table("competidores").max("MedallasDeForma")
+).setUnion(
+  r.table("competidores").max("MedallasDeSalto")
 )
-r.table("competidores").max("MedallasDeFuerza")
-r.table("competidores").max("MedallasDeCombatePorEquipos")
-r.table("competidores").max("MedallasDeCombate")
-r.table("competidores").max("MedallasDeForma")
-r.table("competidores").max("MedallasDeSalto")
 
-
-escuela.getField('ResumenCampeonatos').forEach(function(campeonato) { return result.append({}); })
-
-Campeonato
-
-Campeonato
