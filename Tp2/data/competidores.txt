@@ -11,11 +11,11 @@
 			"id": 1,
 			"nombre": "escuela1"
 		},
-		"MedallasDeForma": 1,
-		"MedallasDeCombate":3,
-		"MedallasDeSalto":0,
-		"MedallasDeCombatePorEquipos":0,
-		"MedallasDeFuerza": 0
+		"medallasDeForma": 1,
+		"medallasDeCombate":3,
+		"medallasDeSalto":0,
+		"medallasDeCombatePorEquipos":0,
+		"medallasDeFuerza": 0
 	},
 	{
 		"id": 2,
@@ -29,11 +29,11 @@
 			"id": 1,
 			"nombre": "escuela2"
 		},
-		"MedallasDeForma": 2,
-		"MedallasDeCombate":0,
-		"MedallasDeSalto":3,
-		"MedallasDeCombatePorEquipos":0,
-		"MedallasDeFuerza": 0
+		"medallasDeForma": 2,
+		"medallasDeCombate":0,
+		"medallasDeSalto":3,
+		"medallasDeCombatePorEquipos":0,
+		"medallasDeFuerza": 0
 	},
 	{
 		"id": 3,
@@ -47,10 +47,10 @@
 			"id": 2,
 			"nombre": "escuela3"
 		},
-		"MedallasDeForma": 0,
-		"MedallasDeCombate":0,
-		"MedallasDeSalto":0,
-		"MedallasDeCombatePorEquipos":0,
-		"MedallasDeFuerza": 1
+		"medallasDeForma": 0,
+		"medallasDeCombate":0,
+		"medallasDeSalto":0,
+		"medallasDeCombatePorEquipos":0,
+		"medallasDeFuerza": 1
 	}
 ]

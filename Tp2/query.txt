@@ -7,8 +7,8 @@ r.table('escuelas')
     .map(function(resumen) {
       return {
         nombre: resumen.getField('nombre'),
-        cantidadMedallas: resumen.getField('ResumenCampeonatos')
-        .map(function(resumen) { return resumen.getField('CantidadDeMedallas'); })
+        cantidadMedallas: resumen.getField('resumenCampeonatos')
+        .map(function(resumen) { return resumen.getField('cantidadDeMedallas'); })
         .reduce(function(left, right) {
            return left.add(right);
         })}})
@@ -20,10 +20,10 @@ r.table('escuelas')
        .map(function(escuela) {
          return {
            Escuela : escuela('nombre'),
-           Result: escuela('ResumenCampeonatos').
-           max('CantidadDeMedallas').without('CantidadDeCompetidores')
+           Result: escuela('resumenCampeonatos').
+           max('cantidadDeMedallas').without('cantidadDeCompetidores')
            }})
-
+  
 
 2.4:
 
@@ -34,11 +34,11 @@ r.table('arbitro').filter(r.row('dirigio').count().gt(3))
 r.table('escuelas')
       .map(function(escuela) {
         return {
-          Resumen: escuela('ResumenCampeonatos').map(function(resumen) {
+          Resumen: escuela('resumenCampeonatos').map(function(resumen) {
             return {
               NombreEscuela: escuela('nombre'),
-              Campeonato: resumen('Campeonato'),
-              CantidadDeCompetidores: resumen('CantidadDeCompetidores')
+              Campeonato: resumen('campeonato'),
+              CantidadDeCompetidores: resumen('cantidadDeCompetidores')
             };
           })}})('Resumen').reduce(function(left, right) { return left.add(right); })
       .group('Campeonato').max('CantidadDeCompetidores')
@@ -46,13 +46,13 @@ r.table('escuelas')
 
 2.6:
 
-r.table("competidores").max("MedallasDeFuerza").setUnion(
+r.expr([]).append(
+  r.table("competidores").max("MedallasDeFuerza")).append(
   r.table("competidores").max("MedallasDeCombatePorEquipos")
-).setUnion(
+).append(
   r.table("competidores").max("MedallasDeCombate")
-).setUnion(
+).append(
   r.table("competidores").max("MedallasDeForma")
-).setUnion(
+).append(
   r.table("competidores").max("MedallasDeSalto")
 )
-
